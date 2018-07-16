@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  src/containers/core.js
- * 
+ *
  *  @flow
  *  @prettier
  */
@@ -17,14 +17,14 @@ const App = () => (
   <Switch>
     <Route
       exact
-      path="/" 
+      path="/"
       component={() => (
         <div>
           <NavLink to="/">core</NavLink>
           <NavLink to="/auth/login">auth</NavLink>
           <NavLink to="/toolbox">toolbox</NavLink>
         </div>
-      )} 
+      )}
     />
     <Route path="/auth" component={AuthCore} />
     <Route path="/dashboard" component={AuthorizedCore} />

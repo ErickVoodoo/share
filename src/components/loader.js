@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  Users/alexandermozolevsky/develop/SHARE_PROJECT/fe/share/src/components/Loader.js
- * 
+ *
  *  @flow
  *  @prettier
  */
@@ -19,16 +19,17 @@ export const Container = styled.div`
   max-height: 0;
   opacity: 0;
 
-  ${ifProp('visible', 
+  ${ifProp(
+    'visible',
     css`
       max-height: 100%;
       opacity: 1;
-    `
+    `,
   )}
 `;
 
 type IProps = {
-  visible: bool,
+  visible: boolean,
 };
 
 export const Loader = ({ visible }: IProps) => (
@@ -37,28 +38,29 @@ export const Loader = ({ visible }: IProps) => (
       <rect id="main" x="0" y="0" width="50" height="10" fill={theme.colors.gray_220} />
       <rect id="additional-1" x="0" y="16" width="150" height="8" fill={theme.colors.gray_220} />
       <rect id="additional-2" x="160" y="16" width="0" height="8" fill={theme.colors.gray_220} />
-      <animate 
+      <animate
         xlinkHref="#main"
         attributeName="width"
         from="50"
-        to="300" 
+        to="300"
         dur="3s"
-        repeatCount="indefinite" />
-      <animate 
+        repeatCount="indefinite"
+      />
+      <animate
         id="anim2"
         xlinkHref="#additional-1"
         attributeName="width"
         from="0"
-        to="150" 
+        to="150"
         dur="0.5s"
         begin="0s; anim2.end+0.5s"
       />
-      <animate 
+      <animate
         id="anim3"
         xlinkHref="#additional-2"
         attributeName="width"
         from="0"
-        to="50" 
+        to="50"
         dur="0.5s"
         begin="0.5s; anim3.end+0.5s"
       />

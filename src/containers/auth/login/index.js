@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  src/containers/auth/login/index.js
- * 
+ *
  *  @flow
  *  @prettier
  */
@@ -31,8 +31,8 @@ type IProps = {
   handleSubmit: Function,
   error: string,
   history: Object,
-  loading: bool,
-}
+  loading: boolean,
+};
 
 class Login extends React.Component {
   props: IProps;
@@ -48,7 +48,7 @@ class Login extends React.Component {
           throw new SubmissionError({ _error: error.message });
         }
       });
-  }
+  };
 
   render() {
     const { handleSubmit, error, loading } = this.props;
@@ -60,34 +60,32 @@ class Login extends React.Component {
           <Loader visible={loading} />
         </Flex>
         <Flex column minWidth={'300px'} width={'30%'} align={'center'} justify={'center'} size={2}>
-          <Text h3 weight={800} align={'left'} width={'100%'}>Авторизация</Text>
-          <Field 
-            name={'email'}
-            component={Input}
-            label={'Логин'}
-          />
-          <Field 
-            name={'password'}
-            component={Input}
-            label={'Пароль'}
-            type={'password'}
-          />
-          <Button secondary type={'submit'} animated={loading} width={'160px'}>Войти</Button>
+          <Text h3 weight={800} align={'left'} width={'100%'}>
+            Авторизация
+          </Text>
+          <Field name={'email'} component={Input} label={'Логин'} />
+          <Field name={'password'} component={Input} label={'Пароль'} type={'password'} />
+          <Button secondary type={'submit'} animated={loading} width={'160px'}>
+            Войти
+          </Button>
         </Flex>
         <Flex size={1} />
       </FormLogin>
     );
-  };
-};
+  }
+}
 
 export const LoginScreen = compose(
-  connect(({ behavior }) => ({
-    loading: !!behavior.progressbars.includes('login'),
-  }), {
-    actionLogin: login,
-  }),
+  connect(
+    ({ behavior }) => ({
+      loading: !!behavior.progressbars.includes('login'),
+    }),
+    {
+      actionLogin: login,
+    },
+  ),
   reduxForm({
     form: 'login',
     validate: validation,
-  })
+  }),
 )(Login);

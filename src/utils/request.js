@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  src/utils/request.js
- * 
+ *
  *  @flow
  *  @prettier
  */
@@ -9,17 +9,18 @@
 import axios from 'axios';
 
 export type Props = {
-  path: string;
-  method?: 'GET' | 'POST' | 'PATCH' | 'PUT' | 'DELETE';
-  headers?: Object;
-  body?: Object;
+  path: string,
+  method?: 'GET' | 'POST' | 'PATCH' | 'PUT' | 'DELETE',
+  headers?: Object,
+  body?: Object,
 };
 
-export const request = ({ path: url, method = 'GET', body = {}, headers = {} }: Props)  =>
+export const request = ({ path: url, method = 'GET', body = {}, headers = {} }: Props) =>
   axios({
     url,
     method,
-    data: body && typeof body === 'object' && !(body instanceof FormData) ? JSON.stringify(body) : body,
+    data:
+      body && typeof body === 'object' && !(body instanceof FormData) ? JSON.stringify(body) : body,
     headers: {
       'Content-Type': 'application/json',
       ...headers,

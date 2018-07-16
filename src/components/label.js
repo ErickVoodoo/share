@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  Users/alexandermozolevsky/develop/SHARE_PROJECT/fe/share/src/components/Hint.js
- * 
+ *
  *  @flow
  *  @prettier
  */
@@ -16,5 +16,10 @@ export const Label = styled.label`
   padding: 4px 0px;
   flex: 1;
 
-  ${ifProp('right', css`text-align: right;`)}
+  ${ifProp(
+    'right',
+    css`
+      text-align: right;
+    `,
+  )};
 `;

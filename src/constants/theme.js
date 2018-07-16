@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  Users/alexandermozolevsky/develop/SHARE_PROJECT/fe/share/src/constants/theme.js
- * 
+ *
  *  @flow
  *  @prettier
  */

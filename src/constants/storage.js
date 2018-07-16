@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  src/constants/storage.js
- * 
+ *
  *  @flow
  *  @prettier
  */

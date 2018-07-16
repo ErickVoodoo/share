@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  src/requests/auth.js
- * 
+ *
  *  @flow
  *  @prettier
  */

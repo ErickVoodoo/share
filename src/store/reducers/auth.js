@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  src/store/reducers/auth.js
- * 
+ *
  *  @flow
  *  @prettier
  */

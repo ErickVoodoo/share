@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  src/store/reducers/behavior.js
- * 
+ *
  *  @flow
  *  @prettier
  */
@@ -21,10 +21,10 @@ export default function behavior(store = initialState, { type, payload }: IPaylo
   switch (type) {
     case START_PROGRESSBAR: {
       if (payload) {
-          store.progressbars.push(payload);
-          return {
-            progressbars: store.progressbars,
-          };
+        store.progressbars.push(payload);
+        return {
+          progressbars: store.progressbars,
+        };
       }
 
       return store;
@@ -33,7 +33,7 @@ export default function behavior(store = initialState, { type, payload }: IPaylo
     case STOP_PROGRESSBAR: {
       if (payload) {
         return {
-          progressbars: store.progressbars.filter(v => v !== payload),
+          progressbars: store.progressbars.filter((v) => v !== payload),
         };
       }
 

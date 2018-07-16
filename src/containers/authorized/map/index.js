@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  src/containers/authorized/map/index.js
- * 
+ *
  *  @flow
  *  @prettier
  */
@@ -11,9 +11,7 @@ import { Fade } from '../../../components/animations';
 import { Loader } from '../../../components';
 
 export class Map extends React.Component {
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
 
   render() {
     return (
@@ -23,4 +21,4 @@ export class Map extends React.Component {
       </Fade>
     );
   }
-};
+}

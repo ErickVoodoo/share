@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  src/utils/api.js
- * 
+ *
  *  @flow
  *  @prettier
  */
@@ -12,7 +12,8 @@ export const getApiPath = (version: string = 'v1'): string =>
 export const getTokenFromStorage = (): string => {
   if (window.localStorage) {
     const store = window.localStorage.getItem('store');
-    const token = (JSON.parse(store) && JSON.parse(store).auth && JSON.parse(store).auth.token) || '';
+    const token =
+      (JSON.parse(store) && JSON.parse(store).auth && JSON.parse(store).auth.token) || '';
     return token;
   }
 

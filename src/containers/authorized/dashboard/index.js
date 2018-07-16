@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  src/containers/dashboard/index.js
- * 
+ *
  *  @flow
  *  @prettier
  */
@@ -14,10 +14,8 @@ import { Map } from '../map';
 import { Entity } from '../entity';
 
 export class Dashboard extends React.Component {
-  componentDidMount() {
+  componentDidMount() {}
 
-  }
-  
   render() {
     return (
       <Flex row>
@@ -28,12 +26,12 @@ export class Dashboard extends React.Component {
         </Flex>
         <Flex column size={9}>
           <Switch>
-            <Route path='/dashboard/map' component={Map} />
-            <Route path='/dashboard/entity' component={Entity} />
-            <Redirect to='/dashboard/map' />
+            <Route path="/dashboard/map" component={Map} />
+            <Route path="/dashboard/entity" component={Entity} />
+            <Redirect to="/dashboard/map" />
           </Switch>
         </Flex>
       </Flex>
     );
   }
-};
+}

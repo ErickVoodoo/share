@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  src/containers/dashboard/index.js
- * 
+ *
  *  @flow
  *  @prettier
  */
@@ -15,7 +15,7 @@ import { SESSION } from '../../constants/storage';
 
 type IProps = {
   history: Object,
-}
+};
 
 export class AuthorizedCore extends React.Component {
   props: IProps;
@@ -34,9 +34,9 @@ export class AuthorizedCore extends React.Component {
     return (
       <Fade from={0} to={1} duration={1} delay={0}>
         <Switch>
-          <Route path='/dashboard' component={Dashboard} />
+          <Route path="/dashboard" component={Dashboard} />
         </Switch>
       </Fade>
     );
   }
-};
+}

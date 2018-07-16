@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  Users/alexandermozolevsky/develop/SHARE_PROJECT/fe/share/src/components/Button.js
- * 
+ *
  *  @flow
  *  @prettier
  */
@@ -24,7 +24,7 @@ export const Button = styled.button`
 
   font-family: Roboto;
   font-size: 12px;
-  font-weight:400;
+  font-weight: 400;
   line-height: 20px;
   text-align: center;
   border-radius: 3px;
@@ -36,7 +36,8 @@ export const Button = styled.button`
     background-color: ${prop('theme.colors.defaultColored')};
   }
 
-  ${ifProp('primary',
+  ${ifProp(
+    'primary',
     css`
       color: ${prop('theme.colors.white')};
       background-color: ${prop('theme.colors.primary')};
@@ -45,42 +46,37 @@ export const Button = styled.button`
       &:active {
         background-color: ${prop('theme.colors.primaryDark')};
       }
-    `
-  )}
+    `,
+  )} ${ifProp(
+      'secondary',
+      css`
+        opacity: 1;
+        color: ${prop('theme.colors.white')};
+        background-color: ${prop('theme.colors.secondary')};
 
-  ${ifProp('secondary',
-    css`
-      opacity: 1;
-      color: ${prop('theme.colors.white')};
-      background-color: ${prop('theme.colors.secondary')};
+        &:hover,
+        &:active {
+          background-color: ${prop('theme.colors.secondaryDark')};
+        }
+      `,
+    )} ${ifProp(
+      'red',
+      css`
+        opacity: 1;
+        color: ${prop('theme.colors.white')};
+        background-color: ${prop('theme.colors.error')};
 
-      &:hover,
-      &:active {
-        background-color: ${prop('theme.colors.secondaryDark')};
-      }
-    `
-  )}
-
-  ${ifProp('red',
-    css`
-      opacity: 1;
-      color: ${prop('theme.colors.white')};
-      background-color: ${prop('theme.colors.error')};
-
-      &:hover,
-      &:active {
-        background-color: ${prop('theme.colors.errorDark')};
-      }
-    `
-  )}
-
-  ${ifProp('round',
-    css`
-      border-radius: 20px;
-    `
-  )}
-
-  &:disabled {
+        &:hover,
+        &:active {
+          background-color: ${prop('theme.colors.errorDark')};
+        }
+      `,
+    )} ${ifProp(
+      'round',
+      css`
+        border-radius: 20px;
+      `,
+    )} &:disabled {
     cursor: not-allowed;
     opacity: 1;
     background-color: ${prop('theme.colors.default')};
@@ -89,10 +85,11 @@ export const Button = styled.button`
 
   width: ${prop('width')};
 
-  ${ifProp('animated', 
+  ${ifProp(
+    'animated',
     css`
       cursor: progress;
-      background: linear-gradient(-45deg, #81D4FA, #29B6F6, #0288D1, #01579B);
+      background: linear-gradient(-45deg, #81d4fa, #29b6f6, #0288d1, #01579b);
       background-size: 400% 400%;
       -webkit-animation: animate 3s ease infinite;
       -moz-animation: animate 3s ease infinite;
@@ -100,39 +97,39 @@ export const Button = styled.button`
 
       @-webkit-keyframes animate {
         0% {
-          background-position: 0% 50%
+          background-position: 0% 50%;
         }
         50% {
-          background-position: 100% 50%
+          background-position: 100% 50%;
         }
         100% {
-          background-position: 0% 50%
+          background-position: 0% 50%;
         }
       }
 
       @-moz-keyframes animate {
         0% {
-          background-position: 0% 50%
+          background-position: 0% 50%;
         }
         50% {
-          background-position: 100% 50%
+          background-position: 100% 50%;
         }
         100% {
-          background-position: 0% 50%
+          background-position: 0% 50%;
         }
       }
 
       @keyframes animate {
         0% {
-          background-position: 0% 50%
+          background-position: 0% 50%;
         }
         50% {
-          background-position: 100% 50%
+          background-position: 100% 50%;
         }
         100% {
-          background-position: 0% 50%
+          background-position: 0% 50%;
         }
       }
-    `
-  )}
+    `,
+  )};
 `;

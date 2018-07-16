@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  Users/alexandermozolevsky/develop/SHARE_PROJECT/fe/share/src/components/Flex.js
- * 
+ *
  *  @flow
  *  @prettier
  */
@@ -21,26 +21,26 @@ export const Flex = styled.div`
       background-color: ${prop('theme.colors.white')};
     `,
   )} ${ifProp(
-  'size',
-  css`
+      'size',
+      css`
         flex: ${prop('size')};
       `,
-)} ${ifProp(
-  'row',
-  css`
+    )} ${ifProp(
+      'row',
+      css`
         flex-direction: row;
       `,
-)} ${ifProp(
-  'align',
-  css`
+    )} ${ifProp(
+      'align',
+      css`
         align-items: ${prop('align')};
       `,
-)} ${ifProp(
-  'justify',
-  css`
+    )} ${ifProp(
+      'justify',
+      css`
         justify-content: ${prop('justify')};
       `,
-)};
+    )};
 
   ${ifProp(
     'kit',
@@ -50,7 +50,8 @@ export const Flex = styled.div`
         margin-left: 8px;
         width: auto !important;
       }
-    `)};
+    `,
+  )};
 
   height: ${prop('height')};
   width: ${prop('width')};

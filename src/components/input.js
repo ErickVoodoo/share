@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  Users/alexandermozolevsky/develop/SHARE_PROJECT/fe/share/src/components/Input.js
- * 
+ *
  *  @flow
  *  @prettier
  */
@@ -15,9 +15,9 @@ import { Flex, Label, Text, ErrorContainer } from './';
 const InputComponent = styled.input`
   height: 40px;
   padding: 0px 8px;
-  
+
   transition: all 0.2s ease-in-out;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   height: 40px;
   outline: none;
   border: none;
@@ -66,14 +66,14 @@ type IProps = {
   input: Object,
   meta: Object,
   maxLength: number | string,
-  textarea: bool,
+  textarea: boolean,
   label: string,
 };
 
 export const Input = (props: IProps) => {
-  const { 
-    input: { value = '', onChange = () => {} } = { }, 
-    meta: { touched, error } = { },
+  const {
+    input: { value = '', onChange = () => {} } = {},
+    meta: { touched, error } = {},
     maxLength,
     textarea,
     label,
@@ -92,7 +92,7 @@ export const Input = (props: IProps) => {
       } else {
         onChange(v);
       }
-    }
+    },
   };
 
   return (
@@ -101,20 +101,19 @@ export const Input = (props: IProps) => {
         {label && <Label>{label}</Label>}
         {maxLength && <Label right>{`${value.length} / ${maxLength}`}</Label>}
       </Flex>
-      {textarea ? 
-        <TextareaComponent 
-          {...commonProps}
-          rows={10}
-          {...params}
-        /> :
-        <InputComponent
-          {...commonProps}
-          {...params}
-        />
-      }
-      
+      {textarea ? (
+        <TextareaComponent {...commonProps} rows={10} {...params} />
+      ) : (
+        <InputComponent {...commonProps} {...params} />
+      )}
+
       <ErrorContainer>
-        {touched && error && <Text red h5 weight={300}>{error}</Text>}
+        {touched &&
+          error && (
+            <Text red h5 weight={300}>
+              {error}
+            </Text>
+          )}
       </ErrorContainer>
     </Flex>
   );

@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  src/store/actions/behavior.js
- * 
+ *
  *  @flow
  *  @prettier
  */

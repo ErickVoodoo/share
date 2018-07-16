@@ -13,10 +13,7 @@ type IPayload = {
   payload: any,
 };
 
-export default function core(
-  store: Object = initialState,
-  { type, payload }: IPayload,
-) {
+export default function core(store: Object = initialState, { type, payload }: IPayload) {
   switch (type) {
     case '': {
       return store;

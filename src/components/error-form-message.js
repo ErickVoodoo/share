@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  Users/alexandermozolevsky/develop/SHARE_PROJECT/fe/share/src/components/ErrorContainer.js
- * 
+ *
  *  @flow
  *  @prettier
  */
@@ -22,10 +22,11 @@ export const ErrorFormMessage = styled.div`
   padding: 20px;
   box-shadow: 1px 1px 13px 1px ${prop('theme.colors.gray_240')};
 
-  ${ifProp('visible', 
+  ${ifProp(
+    'visible',
     css`
       max-height: 100%;
       opacity: 1;
-    `
+    `,
   )}
 `;

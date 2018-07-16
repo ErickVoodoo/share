@@ -68,15 +68,7 @@ const reducers = persistCombineReducers(config, {
   form: formReducer,
 });
 
-const store = createStore(
-  reducers,
-  persistedState,
-  composeEnhancers(
-    applyMiddleware(
-      thunk,
-    ),
-  ),
-);
+const store = createStore(reducers, persistedState, composeEnhancers(applyMiddleware(thunk)));
 
 // If store changes - write all data to localstorage
 store.subscribe(() => {

@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  src/containers/auth/sidemenu/index.js
- * 
+ *
  *  @flow
  *  @prettier
  */
@@ -43,11 +43,15 @@ const Bottom = styled(Flex)`
 export const Sidemenu = () => (
   <Container column>
     <Top align={'center'} justify={'center'}>
-      <Text white h1 align={'center'} padding={20}>Ищите что-нибудь пожалуйста</Text>
+      <Text white h1 align={'center'} padding={20}>
+        Ищите что-нибудь пожалуйста
+      </Text>
     </Top>
     <Flex column size={1}>
       <Middle align={'center'} justify={'center'}>
-        <Text white h1 align={'center'} padding={20}>И находите то, что нужно</Text>
+        <Text white h1 align={'center'} padding={20}>
+          И находите то, что нужно
+        </Text>
       </Middle>
       <Bottom />
     </Flex>

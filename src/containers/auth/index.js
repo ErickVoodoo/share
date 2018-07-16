@@ -1,7 +1,7 @@
 /**
  *  @Module
  *  src/containers/auth/core.js
- * 
+ *
  *  @flow
  *  @prettier
  */
@@ -37,10 +37,10 @@ export class AuthCore extends React.Component {
       <Flex row height={'100%'}>
         <Sidemenu />
         <Flex size={1} align={'center'} justify={'center'}>
-          <Route path='/auth/login' component={LoginScreen} />
-          <Redirect to={'/auth/login'}/>
+          <Route path="/auth/login" component={LoginScreen} />
+          <Redirect to={'/auth/login'} />
         </Flex>
       </Flex>
     );
   }
-};
+}
