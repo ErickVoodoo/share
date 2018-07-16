@@ -1,0 +1,17 @@
+/**
+ *  @Module
+ *  Users/alexandermozolevsky/develop/SHARE_PROJECT/fe/share/src/components/form.js
+ * 
+ *  @flow
+ *  @prettier
+ */
+
+import styled from 'styled-components';
+
+export const Form = styled.form`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+`;

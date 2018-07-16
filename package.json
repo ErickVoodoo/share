@@ -1,0 +1,51 @@
+{
+  "name": "share",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "localforage": "^1.7.2",
+    "normalize.css": "^8.0.0",
+    "query-string": "^6.1.0",
+    "react": "^16.4.1",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "recompose": "^0.27.1",
+    "redux": "^4.0.0",
+    "redux-form": "^7.4.2",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^3.3.3",
+    "styled-tools": "^0.6.0",
+    "validator": "^10.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "eslint-fix": "./node_modules/.bin/eslint --fix . --ext .js src",
+    "prettier-fix": "prettier --config .prettierlc.json --write 'src/**/*.js'"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.5",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-flowtype": "^2.49.3",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "pre-commit": "^1.2.2",
+    "prettier-eslint-cli": "^4.7.1"
+  },
+  "pre-commit": [
+    "prettier-fix",
+    "eslint-fix"
+  ]
+}
