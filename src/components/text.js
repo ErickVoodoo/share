@@ -10,6 +10,7 @@ import styled, { css } from 'styled-components';
 import { ifProp, prop } from 'styled-tools';
 
 export const Text = styled.span`
+  transition: all 0.2s ease-in-out;
   font-family: Roboto, sans-serif;
   font-size: 16px;
   color: ${prop('theme.colors.text')};
@@ -71,14 +72,43 @@ export const Text = styled.span`
         color: ${prop('theme.colors.primary')};
       `,
     )} ${ifProp(
-      'secondary',
+      'primary3',
       css`
-        color: ${prop('theme.colors.secondary')};
+        color: ${prop('theme.colors.primary3')};
       `,
-    )} ${ifProp(
+    )} 
+    
+    ${ifProp('green', 
+      css`
+        color: ${prop('theme.colors.green')};
+      `
+    )}
+    
+    ${ifProp(
       'weight',
       css`
         font-weight: ${prop('weight')};
       `,
     )} width: ${prop('width')};
+
+    ${ifProp('overflow', 
+      css`
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100%;
+      `
+    )}
+
+    ${ifProp('shadow', 
+      css`
+        text-shadow: 2px 2px ${prop('theme.colors.text')};
+      `
+    )}
+
+    ${ifProp('uppercase', 
+      css`
+        text-transform: uppercase;
+      `
+    )}
 `;

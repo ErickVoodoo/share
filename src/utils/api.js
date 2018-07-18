@@ -6,8 +6,10 @@
  *  @prettier
  */
 
+export const API_URL = 'http://127.0.0.1:8079';
+
 export const getApiPath = (version: string = 'v1'): string =>
-  `http://127.0.0.1:8079/api/${version}`;
+  `${API_URL}/api/${version}`;
 
 export const getTokenFromStorage = (): string => {
   if (window.localStorage) {

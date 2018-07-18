@@ -18,7 +18,7 @@ export const ErrorFormMessage = styled.div`
   max-height: 0;
   opacity: 0;
   background-color: ${prop('theme.colors.gray_240')};
-  color: ${prop('theme.colors.primaryDark')};
+  color: ${prop('theme.colors.primary3')};
   padding: 20px;
   box-shadow: 1px 1px 13px 1px ${prop('theme.colors.gray_240')};
 

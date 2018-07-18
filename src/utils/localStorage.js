@@ -23,18 +23,18 @@ export const getStorageItem = ({ key }: { key: string }): string => {
 
 export const setStorageItem = ({ key, value = '' }: ISet): void => {
   if (localForage) {
-    localForage.setItem(key, typeof value === 'object' && value ? JSON.stringify(value) : value);
+    return localForage.setItem(key, typeof value === 'object' && value ? JSON.stringify(value) : value);
   }
 };
 
 export const removeStorageItem = ({ key }: { key: string }): void => {
   if (localForage) {
-    localForage.clear(key);
+    return localForage.removeItem(key);
   }
 };
 
 export const clearStorage = (): void => {
   if (localForage) {
-    localForage.clear();
+    return localForage.clear();
   }
 };

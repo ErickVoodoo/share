@@ -55,8 +55,8 @@ export const Toolbox = () => (
       <Button primary round>
         Primary Round
       </Button>
-      <Button secondary>Secondary</Button>
-      <Button secondary round>
+      <Button primary3>Secondary</Button>
+      <Button primary3 round>
         Secondary Round
       </Button>
       <Button disabled>Disabled</Button>
@@ -75,12 +75,12 @@ export const Toolbox = () => (
       <Text h6>h6</Text>
       <Text red>red</Text>
       <Text primary>primary</Text>
-      <Text secondary>secondary</Text>
-      <Text secondary weight={800}>
-        secondary bold
+      <Text primary3>primary3</Text>
+      <Text primary3 weight={800}>
+        primary3 bold
       </Text>
-      <Text secondary weight={200}>
-        secondary thin
+      <Text primary3 weight={200}>
+        primary3 thin
       </Text>
     </Flex>
     <Flex column kit>

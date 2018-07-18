@@ -11,19 +11,26 @@ import styled, { css } from 'styled-components';
 import { ifProp } from 'styled-tools';
 import theme from '../constants/theme';
 
-export const Container = styled.div`
+const Container = styled.div`
+  position: absolute;
   box-sizing: border-box;
   transition: all 0.8s ease-in-out;
-  max-width: 600px
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  max-height: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
   opacity: 0;
-
+  
+  z-index: -1;
   ${ifProp(
     'visible',
     css`
-      max-height: 100%;
       opacity: 1;
+      z-index: 2;
     `,
   )}
 `;
@@ -34,10 +41,10 @@ type IProps = {
 
 export const Loader = ({ visible }: IProps) => (
   <Container visible={visible}>
-    <svg xmlns="http://www.w3.org/2000/svg" height="24" width="100%">
-      <rect id="main" x="0" y="0" width="50" height="10" fill={theme.colors.gray_220} />
-      <rect id="additional-1" x="0" y="16" width="150" height="8" fill={theme.colors.gray_220} />
-      <rect id="additional-2" x="160" y="16" width="0" height="8" fill={theme.colors.gray_220} />
+    <svg xmlns="http://www.w3.org/2000/svg" height="24" width="auto" style={{ width: 'auto' }}>
+      <rect id="main" x="0" y="0" width="50" height="10" fill={theme.colors.white} />
+      <rect id="additional-1" x="0" y="16" width="150" height="8" fill={theme.colors.white} />
+      <rect id="additional-2" x="160" y="16" width="0" height="8" fill={theme.colors.white} />
       <animate
         xlinkHref="#main"
         attributeName="width"

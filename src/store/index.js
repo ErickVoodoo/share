@@ -19,6 +19,7 @@ import thunk from 'redux-thunk';
 import core from './reducers/core';
 import auth from './reducers/auth';
 import behavior from './reducers/behavior';
+import products from './reducers/products';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -58,13 +59,14 @@ const config = {
   key: 'primary',
   storage,
   blacklist: ['form', 'behavior'],
-  whitelist: ['core', 'auth'],
+  whitelist: ['core', 'auth', 'products'],
 };
 
 const reducers = persistCombineReducers(config, {
   core,
   auth,
   behavior,
+  products,
   form: formReducer,
 });
 

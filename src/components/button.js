@@ -29,7 +29,7 @@ export const Button = styled.button`
   text-align: center;
   border-radius: 3px;
   background-color: ${prop('theme.colors.default')};
-  color: ${prop('theme.colors.secondary')};
+  color: ${prop('theme.colors.primary3')};
 
   &:hover,
   &:active {
@@ -44,19 +44,19 @@ export const Button = styled.button`
 
       &:hover,
       &:active {
-        background-color: ${prop('theme.colors.primaryDark')};
+        background-color: ${prop('theme.colors.primary2')};
       }
     `,
   )} ${ifProp(
-      'secondary',
+      'primary3',
       css`
         opacity: 1;
         color: ${prop('theme.colors.white')};
-        background-color: ${prop('theme.colors.secondary')};
+        background-color: ${prop('theme.colors.primary3')};
 
         &:hover,
         &:active {
-          background-color: ${prop('theme.colors.secondaryDark')};
+          background-color: ${prop('theme.colors.primary4')};
         }
       `,
     )} ${ifProp(
@@ -82,6 +82,19 @@ export const Button = styled.button`
     background-color: ${prop('theme.colors.default')};
     color: ${prop('theme.colors.gray_200')};
   }
+
+  ${ifProp(
+      'white',
+      css`
+        background: ${prop('theme.colors.white')};
+        color: ${prop('theme.colors.primary3')};
+
+        &:hover,
+        &:active {
+          background-color: ${prop('theme.colors.gray_240')};
+        }
+      `,
+    )} 
 
   width: ${prop('width')};
 

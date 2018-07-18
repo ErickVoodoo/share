@@ -110,7 +110,7 @@ export const Input = (props: IProps) => {
       <ErrorContainer>
         {touched &&
           error && (
-            <Text red h5 weight={300}>
+            <Text green h5 weight={300}>
               {error}
             </Text>
           )}

@@ -45,17 +45,20 @@ export const Fade = styled.div`
       opacity: ${prop('to', 1)};
     }
   }
+
+  height: ${prop('height')};
 `;
 
 type IProps = {
   children: any,
   duration: number,
+  delay: number,
 };
 
-export const FadeList = ({ children = [], duration = 1 }: IProps) => (
+export const FadeList = ({ children = [], duration = 1, delay = 70 }: IProps) => (
   <Fragment>
     {(Array.isArray(children) ? children : [children]).map((item, index) => (
-      <Fade duration={duration} delay={70 * index / 1000} key={item.key || item.id}>
+      <Fade duration={duration} delay={delay * index / 1000} key={item.key || item.id}>
         {item}
       </Fade>
     ))}

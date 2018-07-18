@@ -25,13 +25,13 @@ const Container = styled(Flex)`
 const Top = styled(Flex)`
   flex: 1;
   width: 100%;
-  background-color: ${prop('theme.colors.secondary')};
+  background-color: ${prop('theme.colors.primary3')};
 `;
 
 const Middle = styled(Flex)`
   flex: 1;
   width: 100%;
-  background: linear-gradient(${prop('theme.colors.secondary')}, ${prop('theme.colors.white')});
+  background: linear-gradient(${prop('theme.colors.primary3')}, ${prop('theme.colors.white')});
 `;
 
 const Bottom = styled(Flex)`
